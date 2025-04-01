@@ -48,6 +48,9 @@ public class AnnesArmory {
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
 
+        // Register Anvil override manager
+        MinecraftForge.EVENT_BUS.register(AnvilRecipeManager.class);
+
         // Register our mod's ForgeConfigSpec so that Forge can create and load the config file for us
         context.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
