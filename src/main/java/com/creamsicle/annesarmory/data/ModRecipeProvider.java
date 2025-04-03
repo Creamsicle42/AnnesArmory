@@ -32,7 +32,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 Ingredient.of(Items.IRON_INGOT),
                 RecipeCategory.MISC,
                 ModItems.REFINED_IRON_NUGGET.get(),
-                2,
+                0.2f,
                 200
         )
                 .unlockedBy("criteria", has(Items.IRON_INGOT))
