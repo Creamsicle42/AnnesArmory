@@ -39,7 +39,6 @@ public class AnvilRecipeManager {
         }
 
 
-        System.out.println("No applicable overrides");
     }
 
     private static void anvilSingleItem(ItemStack singleItem, AnvilUpdateEvent event) {
@@ -112,13 +111,11 @@ public class AnvilRecipeManager {
         }
 
         if (modifierItem.getItem() == Items.ENCHANTED_BOOK) {
-            System.out.println("Doing book ench");
             int preEnchantCost = curveEnchCost(getItemEnchantSum(toolItem));
 
             ItemEnchantments modEnch = EnchantmentHelper.getEnchantmentsForCrafting(modifierItem);
             ItemEnchantments toolEnch = toolItem.getEnchantments();
             for (Holder<Enchantment> e : modEnch.keySet()) {
-                System.out.println("Adding ench " + e.getRegisteredName());
                 if (!e.value().canEnchant(toolItem)) {
                     continue;
                 }

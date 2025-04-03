@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "criteria": {
+    "has_diamondsteel_ingot": {
       "conditions": {
         "items": [
           {
-            "items": "annesarmory:refined_iron_nugget"
+            "items": "annesarmory:diamondsteel_ingot"
           }
         ]
       },
@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "annesarmory:refined_iron_ingot"
+        "recipe": "minecraft:diamondsteel_nugget"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -21,12 +21,12 @@
   "requirements": [
     [
       "has_the_recipe",
-      "criteria"
+      "has_diamondsteel_ingot"
     ]
   ],
   "rewards": {
     "recipes": [
-      "annesarmory:refined_iron_ingot"
+      "minecraft:diamondsteel_nugget"
     ]
   }
 }

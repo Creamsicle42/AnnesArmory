@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "annesarmory:item/diamondsteel_upgrade_template"
+  }
+}

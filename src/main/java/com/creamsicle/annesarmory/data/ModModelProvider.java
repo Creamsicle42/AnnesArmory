@@ -28,5 +28,9 @@ public class ModModelProvider extends ItemModelProvider {
         basicItem(ModItems.REFINED_IRON_NUGGET.get());
         basicItem(ModItems.REFINED_IRON_UPGRADE_TEMPLATE.get());
         basicItem(ModItems.REPAIR_KIT.get());
+        basicItem(ModItems.DIAMONDSTEEL_COMPOUND.get());
+        basicItem(ModItems.DIAMONDSTEEL_INGOT.get());
+        basicItem(ModItems.DIAMONDSTEEL_NUGGET.get());
+        basicItem(ModItems.DIAMONDSTEEL_UPGRADE_TEMPLATE.get());
     }
 }

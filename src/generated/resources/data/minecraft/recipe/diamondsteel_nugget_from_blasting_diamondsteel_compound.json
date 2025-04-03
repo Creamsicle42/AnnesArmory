@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.2,
+  "ingredient": {
+    "item": "annesarmory:diamondsteel_compound"
+  },
+  "result": {
+    "id": "annesarmory:diamondsteel_nugget"
+  }
+}

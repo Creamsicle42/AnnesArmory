@@ -22,6 +22,10 @@ public class ModCreativeModeTab {
                         output.accept(ModItems.REFINED_IRON_INGOT.get());
                         output.accept(ModItems.REFINED_IRON_NUGGET.get());
                         output.accept(ModItems.REFINED_IRON_UPGRADE_TEMPLATE.get());
+                        output.accept(ModItems.DIAMONDSTEEL_COMPOUND.get());
+                        output.accept(ModItems.DIAMONDSTEEL_NUGGET.get());
+                        output.accept(ModItems.DIAMONDSTEEL_INGOT.get());
+                        output.accept(ModItems.DIAMONDSTEEL_UPGRADE_TEMPLATE.get());
 
                     })
                     .build()

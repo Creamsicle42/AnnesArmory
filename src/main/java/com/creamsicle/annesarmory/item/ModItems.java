@@ -89,6 +89,30 @@ public class ModItems {
                     )
             );
 
+    public static final RegistryObject<Item> DIAMONDSTEEL_UPGRADE_TEMPLATE = ITEMS.register("diamondsteel_upgrade_template",
+            () -> new SmithingTemplateItem(
+                    upgradeApplyComponent("diamondsteel"),
+                    upgradeIngredientComponent("diamondsteel"),
+                    upgradeTitle("diamondsteel"),
+                    upgradeBaseComponent("diamondsteel"),
+                    upgradeAdditionComponent("diamondsteel"),
+                    createUpgradeIconList(),
+                    createUpgradeMaterialList()
+            )
+    );
+
+    public static final RegistryObject<Item> DIAMONDSTEEL_COMPOUND = ITEMS.register("diamondsteel_compound",
+            () -> new Item(new Item.Properties())
+            );
+
+    public static final RegistryObject<Item> DIAMONDSTEEL_INGOT = ITEMS.register("diamondsteel_ingot",
+            () -> new Item(new Item.Properties())
+    );
+
+    public static final RegistryObject<Item> DIAMONDSTEEL_NUGGET = ITEMS.register("diamondsteel_nugget",
+            () -> new Item(new Item.Properties())
+    );
+
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }

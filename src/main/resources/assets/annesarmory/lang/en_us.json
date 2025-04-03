@@ -6,8 +6,17 @@
   "item.annesarmory.refined_iron_ingot": "Refined Iron Ingot",
   "item.annesarmory.refined_iron_nugget": "Refined Iron Nugget",
 
+  "item.annesarmory.diamondsteel_compound": "Diamondsteel Compound",
+  "item.annesarmory.diamondsteel_nugget": "Diamondsteel Nugget",
+  "item.annesarmory.diamondsteel_ingot": "Diamondsteel Ingot",
+
   "item.annesarmory.refined_iron_upgrade_template": "Smithing Template",
   "upgrade.annesarmory.refined_iron_upgrade": "Iron Upgrade",
   "item.annesarmory.smithing_template.refined_iron_upgrade.applies_to": "Stone and Leather Equipment",
-  "item.annesarmory.smithing_template.refined_iron_upgrade.ingredients": "Refined Iron Ingot"
+  "item.annesarmory.smithing_template.refined_iron_upgrade.ingredients": "Refined Iron Ingot",
+
+  "item.annesarmory.diamondsteel_upgrade_template": "Smithing Template",
+  "upgrade.annesarmory.diamondsteel_upgrade": "Diamond Upgrade",
+  "item.annesarmory.smithing_template.diamondsteel_upgrade.applies_to": "Iron Equipment",
+  "item.annesarmory.smithing_template.diamondsteel_upgrade.ingredients": "Diamondsteel Ingot"
 }

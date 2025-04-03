@@ -3,16 +3,19 @@
   "category": "misc",
   "key": {
     "a": {
+      "item": "minecraft:diamond"
+    },
+    "n": {
       "item": "annesarmory:refined_iron_nugget"
     }
   },
   "pattern": [
-    "aaa",
-    "aaa",
-    "aaa"
+    " n ",
+    "nan",
+    " n "
   ],
   "result": {
     "count": 1,
-    "id": "annesarmory:refined_iron_ingot"
+    "id": "annesarmory:diamondsteel_compound"
   }
 }

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "annesarmory:diamondsteel_ingot"
+  },
+  "base": {
+    "item": "minecraft:iron_chestplate"
+  },
+  "result": {
+    "count": 1,
+    "id": "minecraft:diamond_chestplate"
+  },
+  "template": {
+    "item": "annesarmory:diamondsteel_upgrade_template"
+  }
+}

@@ -17,6 +17,7 @@ import net.minecraft.world.level.ItemLike;
 import net.minecraftforge.common.crafting.ConditionalRecipe;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 
+import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
 public class ModRecipeProvider extends RecipeProvider implements IConditionBuilder {
@@ -45,20 +46,19 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .save(pRecipeOutput, "annesarmory:refined_iron_blasting");
 
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.REFINED_IRON_INGOT.get())
-                .pattern("aaa")
-                .pattern("aaa")
-                .pattern("aaa")
-                .define('a', ModItems.REFINED_IRON_NUGGET.get())
-                .unlockedBy("criteria", has(ModItems.REFINED_IRON_NUGGET.get()))
+
+        nineBlockStorageRecipes(pRecipeOutput, RecipeCategory.MISC, ModItems.REFINED_IRON_NUGGET.get(), RecipeCategory.MISC, ModItems.REFINED_IRON_INGOT.get());
+        nineBlockStorageRecipes(pRecipeOutput, RecipeCategory.MISC, ModItems.DIAMONDSTEEL_NUGGET.get(), RecipeCategory.MISC, ModItems.DIAMONDSTEEL_INGOT.get());
+        oreBlasting(pRecipeOutput, List.of(ModItems.DIAMONDSTEEL_COMPOUND.get()), RecipeCategory.MISC, ModItems.DIAMONDSTEEL_NUGGET.get(), 0.2f, 200, "");
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.DIAMONDSTEEL_COMPOUND.get())
+                .pattern(" n ")
+                .pattern("nan")
+                .pattern(" n ")
+                .define('n', ModItems.REFINED_IRON_NUGGET.get())
+                .define('a', Items.DIAMOND)
+                .unlockedBy("criteria", has(Items.DIAMOND))
                 .save(pRecipeOutput);
-
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.REFINED_IRON_NUGGET.get(), 9)
-                .requires(ModItems.REFINED_IRON_INGOT.get())
-                .unlockedBy("criteria", has(ModItems.REFINED_IRON_INGOT.get()))
-                .save(pRecipeOutput);
-
-
 
         smithingUpgrade(
                 ModItems.REFINED_IRON_UPGRADE_TEMPLATE.get(),
@@ -133,6 +133,127 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 pRecipeOutput
         );
 
+
+        smithingUpgrade(
+                ModItems.DIAMONDSTEEL_UPGRADE_TEMPLATE.get(),
+                Items.IRON_SWORD,
+                Items.DIAMOND_SWORD,
+                ModItems.DIAMONDSTEEL_INGOT.get(),
+                "iron_sword_upgrade",
+                pRecipeOutput
+        );
+        smithingUpgrade(
+                ModItems.DIAMONDSTEEL_UPGRADE_TEMPLATE.get(),
+                Items.IRON_AXE,
+                Items.DIAMOND_AXE,
+                ModItems.DIAMONDSTEEL_INGOT.get(),
+                "iron_axe_upgrade",
+                pRecipeOutput
+        );
+        smithingUpgrade(
+                ModItems.DIAMONDSTEEL_UPGRADE_TEMPLATE.get(),
+                Items.IRON_SHOVEL,
+                Items.DIAMOND_SHOVEL,
+                ModItems.DIAMONDSTEEL_INGOT.get(),
+                "iron_shovel_upgrade",
+                pRecipeOutput
+        );
+        smithingUpgrade(
+                ModItems.DIAMONDSTEEL_UPGRADE_TEMPLATE.get(),
+                Items.IRON_HOE,
+                Items.DIAMOND_HOE,
+                ModItems.DIAMONDSTEEL_INGOT.get(),
+                "diamond_hoe_upgrade",
+                pRecipeOutput
+        );
+        smithingUpgrade(
+                ModItems.DIAMONDSTEEL_UPGRADE_TEMPLATE.get(),
+                Items.IRON_PICKAXE,
+                Items.DIAMOND_PICKAXE,
+                ModItems.DIAMONDSTEEL_INGOT.get(),
+                "iron_pickaxe_upgrade",
+                pRecipeOutput
+        );
+        smithingUpgrade(
+                ModItems.DIAMONDSTEEL_UPGRADE_TEMPLATE.get(),
+                Items.IRON_BOOTS,
+                Items.DIAMOND_BOOTS,
+                ModItems.DIAMONDSTEEL_INGOT.get(),
+                "diamond_boots_upgrade",
+                pRecipeOutput
+        );
+        smithingUpgrade(
+                ModItems.DIAMONDSTEEL_UPGRADE_TEMPLATE.get(),
+                Items.IRON_LEGGINGS,
+                Items.DIAMOND_LEGGINGS,
+                ModItems.DIAMONDSTEEL_INGOT.get(),
+                "iron_leggings_upgrade",
+                pRecipeOutput
+        );
+        smithingUpgrade(
+                ModItems.DIAMONDSTEEL_UPGRADE_TEMPLATE.get(),
+                Items.IRON_CHESTPLATE,
+                Items.DIAMOND_CHESTPLATE,
+                ModItems.DIAMONDSTEEL_INGOT.get(),
+                "iron_chestplate_upgrade",
+                pRecipeOutput
+        );
+        smithingUpgrade(
+                ModItems.DIAMONDSTEEL_UPGRADE_TEMPLATE.get(),
+                Items.IRON_HELMET,
+                Items.DIAMOND_HELMET,
+                ModItems.DIAMONDSTEEL_INGOT.get(),
+                "iron_helmet_upgrade",
+                pRecipeOutput
+        );
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.REFINED_IRON_UPGRADE_TEMPLATE.get(), 2)
+                .pattern("sis")
+                .pattern("sps")
+                .pattern("sss")
+                .define('s', Items.STONE)
+                .define('i', Items.IRON_INGOT)
+                .define('p', ModItems.REFINED_IRON_UPGRADE_TEMPLATE.get())
+                .unlockedBy("criteria", has(ModItems.REFINED_IRON_UPGRADE_TEMPLATE.get()))
+                .save(pRecipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.DIAMONDSTEEL_UPGRADE_TEMPLATE.get(), 2)
+                .pattern("sis")
+                .pattern("sps")
+                .pattern("sss")
+                .define('s', Items.IRON_INGOT)
+                .define('i', Items.DIAMOND)
+                .define('p', ModItems.DIAMONDSTEEL_UPGRADE_TEMPLATE.get())
+                .unlockedBy("criteria", has(ModItems.DIAMONDSTEEL_UPGRADE_TEMPLATE.get()))
+                .save(pRecipeOutput);
+
+        removeRecipe("iron_axe", pRecipeOutput);
+        removeRecipe("iron_pickaxe", pRecipeOutput);
+        removeRecipe("iron_hoe", pRecipeOutput);
+        removeRecipe("iron_shovel", pRecipeOutput);
+        removeRecipe("iron_sword", pRecipeOutput);
+        removeRecipe("iron_boots", pRecipeOutput);
+        removeRecipe("iron_leggings", pRecipeOutput);
+        removeRecipe("iron_chestplate", pRecipeOutput);
+        removeRecipe("iron_helmet", pRecipeOutput);
+
+        removeRecipe("diamond_axe", pRecipeOutput);
+        removeRecipe("diamond_pickaxe", pRecipeOutput);
+        removeRecipe("diamond_hoe", pRecipeOutput);
+        removeRecipe("diamond_shovel", pRecipeOutput);
+        removeRecipe("diamond_sword", pRecipeOutput);
+        removeRecipe("diamond_boots", pRecipeOutput);
+        removeRecipe("diamond_leggings", pRecipeOutput);
+        removeRecipe("diamond_chestplate", pRecipeOutput);
+        removeRecipe("diamond_helmet", pRecipeOutput);
+
+    }
+
+    private static void removeRecipe(String recipe, RecipeOutput recipeOutput) {
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.TOOLS, Items.BARRIER)
+                .requires(Items.BARRIER)
+                .unlockedBy("condition", has(Items.BARRIER))
+                .save(recipeOutput, recipe);
     }
 
     private static void smithingUpgrade(Item template, Item base, Item result, Item otherIng, String name, RecipeOutput pRecipeOutput) {

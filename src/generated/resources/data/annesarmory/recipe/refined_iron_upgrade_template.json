@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "i": {
+      "item": "minecraft:iron_ingot"
+    },
+    "p": {
+      "item": "annesarmory:refined_iron_upgrade_template"
+    },
+    "s": {
+      "item": "minecraft:stone"
+    }
+  },
+  "pattern": [
+    "sis",
+    "sps",
+    "sss"
+  ],
+  "result": {
+    "count": 2,
+    "id": "annesarmory:refined_iron_upgrade_template"
+  }
+}
