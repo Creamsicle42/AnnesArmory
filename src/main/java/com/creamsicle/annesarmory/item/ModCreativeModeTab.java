@@ -18,6 +18,7 @@ public class ModCreativeModeTab {
                     .icon(() -> new ItemStack(ModItems.REFINED_IRON_INGOT.get()))
                     .title(Component.translatable("creativetab.annesarmory.annesarmory_tab"))
                     .displayItems((itemDisplayParameters, output) -> {
+                        output.accept(ModItems.REPAIR_KIT.get());
                         output.accept(ModItems.REFINED_IRON_INGOT.get());
                         output.accept(ModItems.REFINED_IRON_NUGGET.get());
                         output.accept(ModItems.REFINED_IRON_UPGRADE_TEMPLATE.get());

@@ -2,6 +2,7 @@ package com.creamsicle.annesarmory.data;
 
 
 import com.creamsicle.annesarmory.item.ModItems;
+import com.creamsicle.annesarmory.recipes.RepairKitRepair;
 import net.minecraft.advancements.Criterion;
 import net.minecraft.advancements.critereon.SimpleCriterionTrigger;
 import net.minecraft.core.HolderLookup;
@@ -27,6 +28,9 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
     @Override
     protected void buildRecipes(RecipeOutput pRecipeOutput) {
+
+        SpecialRecipeBuilder.special(RepairKitRepair::new)
+                        .save(pRecipeOutput, "repair");
 
         SimpleCookingRecipeBuilder.blasting(
                 Ingredient.of(Items.IRON_INGOT),

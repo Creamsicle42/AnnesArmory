@@ -27,5 +27,6 @@ public class ModModelProvider extends ItemModelProvider {
         basicItem(ModItems.REFINED_IRON_INGOT.get());
         basicItem(ModItems.REFINED_IRON_NUGGET.get());
         basicItem(ModItems.REFINED_IRON_UPGRADE_TEMPLATE.get());
+        basicItem(ModItems.REPAIR_KIT.get());
     }
 }

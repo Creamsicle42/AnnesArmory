@@ -66,6 +66,11 @@ public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, AnnesArmory.MOD_ID);
 
+    public static final RegistryObject<Item> REPAIR_KIT = ITEMS.register("repair_kit",
+            () -> new Item(new Item.Properties().durability(10).stacksTo(1))
+            );
+
+
     public static final RegistryObject<Item> REFINED_IRON_INGOT = ITEMS.register("refined_iron_ingot",
         () -> new Item(new Item.Properties()));
 
