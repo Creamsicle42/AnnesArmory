@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:leather_leggings_upgrade"
+        "recipe": "annesarmory:stone_shovel_upgrade"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:leather_leggings_upgrade"
+      "annesarmory:stone_shovel_upgrade"
     ]
   }
 }

@@ -14,6 +14,7 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.BlastingRecipe;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
+import net.minecraftforge.common.crafting.ConditionalRecipe;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 
 import java.util.concurrent.CompletableFuture;
@@ -30,7 +31,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     protected void buildRecipes(RecipeOutput pRecipeOutput) {
 
         SpecialRecipeBuilder.special(RepairKitRepair::new)
-                        .save(pRecipeOutput, "repair");
+                        .save(pRecipeOutput, "annesarmory:repair");
+
 
         SimpleCookingRecipeBuilder.blasting(
                 Ingredient.of(Items.IRON_INGOT),
@@ -40,7 +42,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 200
         )
                 .unlockedBy("criteria", has(Items.IRON_INGOT))
-                .save(pRecipeOutput, "refined_iron_blasting");
+                .save(pRecipeOutput, "annesarmory:refined_iron_blasting");
 
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.REFINED_IRON_INGOT.get())
@@ -141,7 +143,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                         RecipeCategory.TOOLS,
                         result
                 ).unlocks("criteria", has(template))
-                .save(pRecipeOutput, name);
+                .save(pRecipeOutput, "annesarmory:%s".formatted(name));
     }
 
 }
