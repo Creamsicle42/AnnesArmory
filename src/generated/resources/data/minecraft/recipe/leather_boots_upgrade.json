@@ -1,14 +1,14 @@
 {
   "type": "minecraft:smithing_transform",
   "addition": {
-    "item": "annesarmory:refined_iron"
+    "item": "annesarmory:refined_iron_ingot"
   },
   "base": {
-    "item": "minecraft:stone_sword"
+    "item": "minecraft:leather_boots"
   },
   "result": {
     "count": 1,
-    "id": "minecraft:iron_sword"
+    "id": "minecraft:iron_boots"
   },
   "template": {
     "item": "annesarmory:refined_iron_upgrade_template"

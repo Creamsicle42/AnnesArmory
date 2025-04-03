@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "annesarmory:refined_iron_ingot"
+  },
+  "base": {
+    "item": "minecraft:leather_leggings"
+  },
+  "result": {
+    "count": 1,
+    "id": "minecraft:iron_leggings"
+  },
+  "template": {
+    "item": "annesarmory:refined_iron_upgrade_template"
+  }
+}

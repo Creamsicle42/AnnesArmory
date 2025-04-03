@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "annesarmory:refined_iron_ingot"
+  },
+  "base": {
+    "item": "minecraft:leather_chestplate"
+  },
+  "result": {
+    "count": 1,
+    "id": "minecraft:iron_chestplate"
+  },
+  "template": {
+    "item": "annesarmory:refined_iron_upgrade_template"
+  }
+}
