@@ -1,0 +1,11 @@
+{
+  "creativetab.annesarmory.annesarmory_tab": "Annes Armory",
+
+  "item.annesarmory.refined_iron_ingot": "Refined Iron Ingot",
+  "item.annesarmory.refined_iron_nugget": "Refined Iron Nugget",
+
+  "item.annesarmory.refined_iron_upgrade_template": "Smithing Template",
+  "upgrade.annesarmory.refined_iron_upgrade": "Iron Upgrade",
+  "item.annesarmory.smithing_template.refined_iron_upgrade.applies_to": "Stone and Leather Equipment",
+  "item.annesarmory.smithing_template.refined_iron_upgrade.ingredients": "Refined Iron Ingot"
+}

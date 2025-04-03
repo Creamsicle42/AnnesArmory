@@ -1,6 +1,7 @@
 package com.creamsicle.annesarmory.data;
 
 
+import com.creamsicle.annesarmory.item.ModItems;
 import net.minecraft.advancements.Criterion;
 import net.minecraft.advancements.critereon.SimpleCriterionTrigger;
 import net.minecraft.core.HolderLookup;
@@ -28,12 +29,12 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     protected void buildRecipes(RecipeOutput pRecipeOutput) {
 
         SmithingTransformRecipeBuilder.smithing(
-                        Ingredient.of(Items.STONE),
+                        Ingredient.of(ModItems.REFINED_IRON_UPGRADE_TEMPLATE.get()),
                         Ingredient.of(Items.STONE_SWORD),
-                        Ingredient.of(Items.IRON_INGOT),
+                        Ingredient.of(ModItems.REFINED_IRON_INGOT.get()),
                         RecipeCategory.TOOLS,
                         Items.IRON_SWORD
-                ).unlocks("criteria", has(Items.STONE_SWORD))
+                ).unlocks("criteria", has(ModItems.REFINED_IRON_UPGRADE_TEMPLATE.get()))
                 .save(pRecipeOutput, "stone_sword_transmute");
 
     }

@@ -1,5 +1,6 @@
 package com.creamsicle.annesarmory;
 
+import com.creamsicle.annesarmory.item.ModCreativeModeTab;
 import com.creamsicle.annesarmory.item.ModItems;
 import com.mojang.logging.LogUtils;
 import net.minecraftforge.api.distmarker.Dist;
@@ -30,6 +31,7 @@ public class AnnesArmory {
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
 
+        ModCreativeModeTab.register(modEventBus);
         ModItems.register(modEventBus);
 
         // Register ourselves for server and other game events we are interested in

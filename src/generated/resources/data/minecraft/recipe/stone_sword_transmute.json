@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smithing_transform",
   "addition": {
-    "item": "minecraft:iron_ingot"
+    "item": "annesarmory:refined_iron"
   },
   "base": {
     "item": "minecraft:stone_sword"
@@ -11,6 +11,6 @@
     "id": "minecraft:iron_sword"
   },
   "template": {
-    "item": "minecraft:stone"
+    "item": "annesarmory:refined_iron_upgrade_template"
   }
 }
