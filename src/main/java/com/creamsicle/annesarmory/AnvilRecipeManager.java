@@ -151,7 +151,7 @@ public class AnvilRecipeManager {
         }
 
         // TODO: Process repair
-        if (toolItem.isValidRepairItem(modifierItem) && toolItem.isDamaged()) {
+        if (toolItem.getItem().isValidRepairItem(toolItem, modifierItem) && toolItem.isDamaged()) {
             toolItem.setDamageValue(0);
             event.setMaterialCost(1);
             event.setCost(1);

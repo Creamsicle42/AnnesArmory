@@ -19,36 +19,24 @@ import java.util.concurrent.CompletableFuture;
 public class ModRecipeProvider extends RecipeProvider implements IConditionBuilder {
 
 
-    protected ModRecipeProvider(HolderLookup.Provider pRegistries, RecipeOutput pOutput) {
-        super(pRegistries, pOutput);
+    public ModRecipeProvider(PackOutput pOutput, CompletableFuture<HolderLookup.Provider> pRegistries) {
+        super(pOutput, pRegistries);
     }
+
 
     @Override
-    protected void buildRecipes() {
+    protected void buildRecipes(RecipeOutput pRecipeOutput) {
+
         SmithingTransformRecipeBuilder.smithing(
-                Ingredient.of(Items.STONE),
-                Ingredient.of(Items.STONE_SWORD),
-                Ingredient.of(Items.IRON_INGOT),
-                RecipeCategory.TOOLS,
-                Items.IRON_SWORD
-        ).unlocks("criteria", has(Items.STONE_SWORD))
-                .save(output, "stone_sword_transmute");
+                        Ingredient.of(Items.STONE),
+                        Ingredient.of(Items.STONE_SWORD),
+                        Ingredient.of(Items.IRON_INGOT),
+                        RecipeCategory.TOOLS,
+                        Items.IRON_SWORD
+                ).unlocks("criteria", has(Items.STONE_SWORD))
+                .save(pRecipeOutput, "stone_sword_transmute");
+
     }
 
-    public static class ModRecipeRunner extends RecipeProvider.Runner {
 
-        protected ModRecipeRunner(PackOutput pPackOutput, CompletableFuture<HolderLookup.Provider> pRegistries) {
-            super(pPackOutput, pRegistries);
-        }
-
-        @Override
-        protected RecipeProvider createRecipeProvider(HolderLookup.Provider pRegistries, RecipeOutput pOutput) {
-            return new ModRecipeProvider(pRegistries, pOutput);
-        }
-
-        @Override
-        public String getName() {
-            return "annesarmoryrecipebuilder";
-        }
-    }
 }
