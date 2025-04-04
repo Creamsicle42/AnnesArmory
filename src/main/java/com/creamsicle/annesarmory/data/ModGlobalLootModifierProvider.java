@@ -85,5 +85,12 @@ public class ModGlobalLootModifierProvider extends GlobalLootModifierProvider {
                 ModItems.DIAMONDSTEEL_UPGRADE_TEMPLATE.get()
         ));
 
+        // Add dagger template to jungle temple
+        add("dagger_template_from_jungle_temple", new AddItemModifier(new LootItemCondition[]{
+                new LootTableIdCondition.Builder(ResourceLocation.withDefaultNamespace("chests/jungle_temple")).build()
+        },
+                ModItems.DAGGER_UPGRADE_TEMPLATE.get()
+        ));
+
     }
 }

@@ -18,14 +18,23 @@ public class ModCreativeModeTab {
                     .icon(() -> new ItemStack(ModItems.REFINED_IRON_INGOT.get()))
                     .title(Component.translatable("creativetab.annesarmory.annesarmory_tab"))
                     .displayItems((itemDisplayParameters, output) -> {
+                        // Refined Iron Line
                         output.accept(ModItems.REPAIR_KIT.get());
                         output.accept(ModItems.REFINED_IRON_INGOT.get());
                         output.accept(ModItems.REFINED_IRON_NUGGET.get());
                         output.accept(ModItems.REFINED_IRON_UPGRADE_TEMPLATE.get());
+
+                        // Diamondsteel Line
                         output.accept(ModItems.DIAMONDSTEEL_COMPOUND.get());
                         output.accept(ModItems.DIAMONDSTEEL_NUGGET.get());
                         output.accept(ModItems.DIAMONDSTEEL_INGOT.get());
                         output.accept(ModItems.DIAMONDSTEEL_UPGRADE_TEMPLATE.get());
+
+                        // Dagger Line
+                        output.accept(ModItems.DAGGER_UPGRADE_TEMPLATE.get());
+                        output.accept(ModItems.IRON_DAGGER.get());
+                        output.accept(ModItems.DIAMOND_DAGGER.get());
+                        output.accept(ModItems.NETHERITE_DAGGER.get());
 
                     })
                     .build()

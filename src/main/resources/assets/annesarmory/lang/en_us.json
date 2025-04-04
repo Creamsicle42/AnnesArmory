@@ -6,6 +6,10 @@
   "item.annesarmory.refined_iron_ingot": "Refined Iron Ingot",
   "item.annesarmory.refined_iron_nugget": "Refined Iron Nugget",
 
+  "item.annesarmory.iron_dagger": "Iron Dagger",
+  "item.annesarmory.diamond_dagger": "Diamond Dagger",
+  "item.annesarmory.netherite_dagger": "Netherite Dagger",
+
   "item.annesarmory.diamondsteel_compound": "Diamondsteel Compound",
   "item.annesarmory.diamondsteel_nugget": "Diamondsteel Nugget",
   "item.annesarmory.diamondsteel_ingot": "Diamondsteel Ingot",
@@ -18,5 +22,10 @@
   "item.annesarmory.diamondsteel_upgrade_template": "Smithing Template",
   "upgrade.annesarmory.diamondsteel_upgrade": "Diamond Upgrade",
   "item.annesarmory.smithing_template.diamondsteel_upgrade.applies_to": "Iron Equipment",
-  "item.annesarmory.smithing_template.diamondsteel_upgrade.ingredients": "Diamondsteel Ingot"
+  "item.annesarmory.smithing_template.diamondsteel_upgrade.ingredients": "Diamondsteel Ingot",
+
+  "item.annesarmory.dagger_upgrade_template": "Smithing Template",
+  "upgrade.annesarmory.dagger_upgrade": "Dagger Upgrade",
+  "item.annesarmory.smithing_template.dagger_upgrade.applies_to": "Iron or better Sword",
+  "item.annesarmory.smithing_template.dagger_upgrade.ingredients": "Matching upgrade material"
 }

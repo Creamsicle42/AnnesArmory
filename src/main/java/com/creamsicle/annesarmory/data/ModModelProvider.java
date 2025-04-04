@@ -1,10 +1,16 @@
 
 package com.creamsicle.annesarmory.data;
 
+import com.creamsicle.annesarmory.AnnesArmory;
 import com.creamsicle.annesarmory.item.ModItems;
 import net.minecraft.data.PackOutput;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.Item;
+import net.minecraftforge.client.model.generators.ItemModelBuilder;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
+import net.minecraftforge.registries.RegistryObject;
+
 public class ModModelProvider extends ItemModelProvider {
 
 
@@ -22,5 +28,16 @@ public class ModModelProvider extends ItemModelProvider {
         basicItem(ModItems.DIAMONDSTEEL_INGOT.get());
         basicItem(ModItems.DIAMONDSTEEL_NUGGET.get());
         basicItem(ModItems.DIAMONDSTEEL_UPGRADE_TEMPLATE.get());
+
+        handheldItem(ModItems.DAGGER_UPGRADE_TEMPLATE);
+        handheldItem(ModItems.IRON_DAGGER);
+        handheldItem(ModItems.DIAMOND_DAGGER);
+        handheldItem(ModItems.NETHERITE_DAGGER);
+    }
+
+    private ItemModelBuilder handheldItem(RegistryObject<Item> item) {
+        return withExistingParent(item.getId().getPath(),
+                ResourceLocation.parse("item/handheld")).texture("layer0",
+                ResourceLocation.fromNamespaceAndPath(AnnesArmory.MOD_ID,"item/" + item.getId().getPath()));
     }
 }

@@ -63,6 +63,31 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .save(pRecipeOutput);
 
         smithingUpgrade(
+                ModItems.DAGGER_UPGRADE_TEMPLATE.get(),
+                Items.IRON_SWORD,
+                ModItems.IRON_DAGGER.get(),
+                ModItems.REFINED_IRON_INGOT.get(),
+                "iron_dagger_upgrade",
+                pRecipeOutput
+        );
+        smithingUpgrade(
+                ModItems.DAGGER_UPGRADE_TEMPLATE.get(),
+                Items.DIAMOND_SWORD,
+                ModItems.DIAMOND_DAGGER.get(),
+                ModItems.DIAMONDSTEEL_INGOT.get(),
+                "diamond_dagger_upgrade",
+                pRecipeOutput
+        );
+        smithingUpgrade(
+                ModItems.DAGGER_UPGRADE_TEMPLATE.get(),
+                Items.NETHERITE_SWORD,
+                ModItems.NETHERITE_DAGGER.get(),
+                Items.NETHERITE_INGOT,
+                "netherite_dagger_upgrade",
+                pRecipeOutput
+        );
+
+        smithingUpgrade(
                 ModItems.REFINED_IRON_UPGRADE_TEMPLATE.get(),
                 Items.STONE_SWORD,
                 Items.IRON_SWORD,

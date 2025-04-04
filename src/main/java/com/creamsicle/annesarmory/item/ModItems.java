@@ -8,6 +8,8 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.SmithingTemplateItem;
+import net.minecraft.world.item.SwordItem;
+import net.minecraft.world.item.Tiers;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -111,6 +113,27 @@ public class ModItems {
 
     public static final RegistryObject<Item> DIAMONDSTEEL_NUGGET = ITEMS.register("diamondsteel_nugget",
             () -> new Item(new Item.Properties())
+    );
+
+    public static final RegistryObject<Item> IRON_DAGGER = ITEMS.register("iron_dagger",
+            () -> new DaggerItem(Tiers.IRON, new Item.Properties().attributes(SwordItem.createAttributes(Tiers.IRON, 2, -1.8F)))
+    );
+    public static final RegistryObject<Item> DIAMOND_DAGGER = ITEMS.register("diamond_dagger",
+            () -> new DaggerItem(Tiers.IRON, new Item.Properties().attributes(SwordItem.createAttributes(Tiers.DIAMOND, 2, -1.8F)))
+    );
+    public static final RegistryObject<Item> NETHERITE_DAGGER = ITEMS.register("netherite_dagger",
+            () -> new DaggerItem(Tiers.IRON, new Item.Properties().attributes(SwordItem.createAttributes(Tiers.NETHERITE, 2, -1.8F)))
+    );
+    public static final RegistryObject<Item> DAGGER_UPGRADE_TEMPLATE = ITEMS.register("dagger_upgrade_template",
+            () -> new SmithingTemplateItem(
+                    upgradeApplyComponent("dagger"),
+                    upgradeIngredientComponent("dagger"),
+                    upgradeTitle("dagger"),
+                    upgradeBaseComponent("dagger"),
+                    upgradeAdditionComponent("dagger"),
+                    createUpgradeIconList(),
+                    createUpgradeMaterialList()
+            )
     );
 
     public static void register(IEventBus eventBus) {
