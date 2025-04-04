@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "annesarmory:diamondsteel_ingot"
+  },
+  "base": {
+    "item": "annesarmory:iron_dagger"
+  },
+  "result": {
+    "count": 1,
+    "id": "annesarmory:diamond_dagger"
+  },
+  "template": {
+    "item": "annesarmory:diamondsteel_upgrade_template"
+  }
+}

@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "annesarmory:netherite_dagger_upgrade"
+        "recipe": "annesarmory:netherite_sword_to_netherite_dagger_upgrade"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "annesarmory:netherite_dagger_upgrade"
+      "annesarmory:netherite_sword_to_netherite_dagger_upgrade"
     ]
   }
 }

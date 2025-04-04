@@ -17,6 +17,23 @@ import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
 public class ModRecipeProvider extends RecipeProvider implements IConditionBuilder {
+    static List<Item> stoneSwordLike = List.of(
+            Items.STONE_SWORD
+    );
+
+    static List<Item> ironSwordLike = List.of(
+            Items.IRON_SWORD,
+            ModItems.IRON_DAGGER.get()
+    );
+    static List<Item> diamondSwordLike = List.of(
+            Items.DIAMOND_SWORD,
+            ModItems.DIAMOND_DAGGER.get()
+    );
+
+    static List<Item> netheriteSwordLike = List.of(
+            Items.NETHERITE_SWORD,
+            ModItems.NETHERITE_DAGGER.get()
+    );
 
 
     public ModRecipeProvider(PackOutput pOutput, CompletableFuture<HolderLookup.Provider> pRegistries) {
@@ -62,30 +79,9 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("criteria", has(Items.DIAMOND))
                 .save(pRecipeOutput);
 
-        smithingUpgrade(
-                ModItems.DAGGER_UPGRADE_TEMPLATE.get(),
-                Items.IRON_SWORD,
-                ModItems.IRON_DAGGER.get(),
-                ModItems.REFINED_IRON_INGOT.get(),
-                "iron_dagger_upgrade",
-                pRecipeOutput
-        );
-        smithingUpgrade(
-                ModItems.DAGGER_UPGRADE_TEMPLATE.get(),
-                Items.DIAMOND_SWORD,
-                ModItems.DIAMOND_DAGGER.get(),
-                ModItems.DIAMONDSTEEL_INGOT.get(),
-                "diamond_dagger_upgrade",
-                pRecipeOutput
-        );
-        smithingUpgrade(
-                ModItems.DAGGER_UPGRADE_TEMPLATE.get(),
-                Items.NETHERITE_SWORD,
-                ModItems.NETHERITE_DAGGER.get(),
-                Items.NETHERITE_INGOT,
-                "netherite_dagger_upgrade",
-                pRecipeOutput
-        );
+        groupSmithing(ironSwordLike, ModItems.IRON_DAGGER.get(), ModItems.DAGGER_UPGRADE_TEMPLATE.get(), ModItems.REFINED_IRON_INGOT.get(), pRecipeOutput);
+        groupSmithing(diamondSwordLike, ModItems.DIAMOND_DAGGER.get(), ModItems.DAGGER_UPGRADE_TEMPLATE.get(), ModItems.DIAMONDSTEEL_INGOT.get(), pRecipeOutput);
+        groupSmithing(netheriteSwordLike, ModItems.NETHERITE_DAGGER.get(), ModItems.DAGGER_UPGRADE_TEMPLATE.get(), Items.NETHERITE_INGOT, pRecipeOutput);
 
         smithingUpgrade(
                 ModItems.REFINED_IRON_UPGRADE_TEMPLATE.get(),
@@ -254,6 +250,13 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("criteria", has(ModItems.DIAMONDSTEEL_UPGRADE_TEMPLATE.get()))
                 .save(pRecipeOutput);
 
+        smithingChain(
+                List.of(ModItems.IRON_DAGGER.get(), ModItems.DIAMOND_DAGGER.get(), ModItems.NETHERITE_DAGGER.get()),
+                List.of(ModItems.DIAMONDSTEEL_UPGRADE_TEMPLATE.get(), Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),
+                List.of(ModItems.DIAMONDSTEEL_INGOT.get(), Items.NETHERITE_INGOT),
+                pRecipeOutput
+        );
+
         removeRecipe("iron_axe", pRecipeOutput);
         removeRecipe("iron_pickaxe", pRecipeOutput);
         removeRecipe("iron_hoe", pRecipeOutput);
@@ -292,6 +295,24 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                         result
                 ).unlocks("criteria", has(template))
                 .save(pRecipeOutput, "annesarmory:%s".formatted(name));
+    }
+
+    private static void smithingChain(List<Item> tools, List<Item> templates, List<Item> materials, RecipeOutput recipeOutput) {
+        for (int i = 0; i < tools.size() - 1; i++) {
+            Item toolFrom = tools.get(i);
+            Item toolTo = tools.get(i + 1);
+            Item template = templates.get(i);
+            Item material = materials.get(i);
+            smithingUpgrade(template, toolFrom, toolTo, material, "%s_to_%s_upgrade".formatted(toolFrom.getDescriptionId().split("\\.")[2], toolTo.getDescriptionId().split("\\.")[2]), recipeOutput);
+        }
+    }
+
+    private static void groupSmithing(List<Item> tools, Item target, Item template, Item material, RecipeOutput recipeOutput) {
+        for (int i = 0; i < tools.size(); i++) {
+            Item toolFrom = tools.get(i);
+            if (toolFrom == target) {continue;}
+            smithingUpgrade(template, toolFrom, target, material, "%s_to_%s_upgrade".formatted(toolFrom.getDescriptionId().split("\\.")[2], target.getDescriptionId().split("\\.")[2]), recipeOutput);
+        }
     }
 
 }

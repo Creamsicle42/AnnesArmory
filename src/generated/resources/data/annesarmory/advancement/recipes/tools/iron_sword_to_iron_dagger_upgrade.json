@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "annesarmory:iron_dagger_upgrade"
+        "recipe": "annesarmory:iron_sword_to_iron_dagger_upgrade"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "annesarmory:iron_dagger_upgrade"
+      "annesarmory:iron_sword_to_iron_dagger_upgrade"
     ]
   }
 }
