@@ -9,6 +9,7 @@ import net.minecraft.data.recipes.*;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.crafting.ShapelessRecipe;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 import org.jetbrains.annotations.NotNull;
 
@@ -41,6 +42,12 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .save(pRecipeOutput, "annesarmory:refined_iron_blasting");
 
 
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.TOOLS, ModItems.REPAIR_KIT.get())
+                .requires(Items.LEATHER)
+                .requires(Items.IRON_INGOT)
+                .requires(Items.FLINT)
+                .unlockedBy("criteria", has(Items.LEATHER))
+                .save(pRecipeOutput);
 
         nineBlockStorageRecipes(pRecipeOutput, RecipeCategory.MISC, ModItems.REFINED_IRON_NUGGET.get(), RecipeCategory.MISC, ModItems.REFINED_IRON_INGOT.get());
         nineBlockStorageRecipes(pRecipeOutput, RecipeCategory.MISC, ModItems.DIAMONDSTEEL_NUGGET.get(), RecipeCategory.MISC, ModItems.DIAMONDSTEEL_INGOT.get());
