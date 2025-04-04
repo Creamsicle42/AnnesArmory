@@ -3,19 +3,14 @@ package com.creamsicle.annesarmory.data;
 
 import com.creamsicle.annesarmory.item.ModItems;
 import com.creamsicle.annesarmory.recipes.RepairKitRepair;
-import net.minecraft.advancements.Criterion;
-import net.minecraft.advancements.critereon.SimpleCriterionTrigger;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
-import net.minecraft.world.item.crafting.BlastingRecipe;
 import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.level.ItemLike;
-import net.minecraftforge.common.crafting.ConditionalRecipe;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
@@ -29,7 +24,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
 
     @Override
-    protected void buildRecipes(RecipeOutput pRecipeOutput) {
+    protected void buildRecipes(@NotNull RecipeOutput pRecipeOutput) {
 
         SpecialRecipeBuilder.special(RepairKitRepair::new)
                         .save(pRecipeOutput, "annesarmory:repair");

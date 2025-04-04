@@ -25,6 +25,8 @@ public class ModDataGenerators {
         BlockTagsProvider blockTagsProvider = new ModBlockTagProvider(packOutput, lookupProvider, existingFileHelper);
         generator.addProvider(event.includeServer(), blockTagsProvider);
         generator.addProvider(event.includeServer(), new ModItemTagProvider(packOutput, lookupProvider, blockTagsProvider.contentsGetter()));
+        generator.addProvider(event.includeServer(), new ModGlobalLootModifierProvider(packOutput, lookupProvider));
+
         generator.addProvider(event.includeClient(), new ModModelProvider(packOutput, AnnesArmory.MOD_ID, existingFileHelper));
     }
 

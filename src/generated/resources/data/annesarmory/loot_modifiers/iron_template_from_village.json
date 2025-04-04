@@ -1,0 +1,14 @@
+{
+  "type": "annesarmory:add_item",
+  "conditions": [
+    {
+      "condition": "forge:loot_table_id",
+      "loot_table_id": "minecraft:chests/village/village_armorer"
+    },
+    {
+      "chance": 0.7,
+      "condition": "minecraft:random_chance"
+    }
+  ],
+  "item": "annesarmory:refined_iron_upgrade_template"
+}

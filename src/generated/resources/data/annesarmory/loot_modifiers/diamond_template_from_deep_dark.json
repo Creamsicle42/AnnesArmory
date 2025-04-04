@@ -1,0 +1,14 @@
+{
+  "type": "annesarmory:add_item",
+  "conditions": [
+    {
+      "condition": "forge:loot_table_id",
+      "loot_table_id": "minecraft:chests/ancient_city"
+    },
+    {
+      "chance": 0.4,
+      "condition": "minecraft:random_chance"
+    }
+  ],
+  "item": "annesarmory:diamondsteel_upgrade_template"
+}

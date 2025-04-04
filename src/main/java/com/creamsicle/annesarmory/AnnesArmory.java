@@ -2,6 +2,7 @@ package com.creamsicle.annesarmory;
 
 import com.creamsicle.annesarmory.item.ModCreativeModeTab;
 import com.creamsicle.annesarmory.item.ModItems;
+import com.creamsicle.annesarmory.loot.ModLootModifiers;
 import com.creamsicle.annesarmory.recipes.ModRecipes;
 import com.mojang.logging.LogUtils;
 import net.minecraftforge.api.distmarker.Dist;
@@ -35,6 +36,7 @@ public class AnnesArmory {
         ModCreativeModeTab.register(modEventBus);
         ModItems.register(modEventBus);
         ModRecipes.register(modEventBus);
+        ModLootModifiers.register(modEventBus);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
