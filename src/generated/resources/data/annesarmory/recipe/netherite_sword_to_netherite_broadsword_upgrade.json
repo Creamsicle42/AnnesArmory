@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "minecraft:netherite_ingot"
+  },
+  "base": {
+    "item": "minecraft:netherite_sword"
+  },
+  "result": {
+    "count": 1,
+    "id": "annesarmory:netherite_broadsword"
+  },
+  "template": {
+    "item": "annesarmory:broadsword_upgrade_template"
+  }
+}

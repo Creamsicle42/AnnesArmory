@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "annesarmory:refined_iron_ingot"
+  },
+  "base": {
+    "item": "minecraft:iron_sword"
+  },
+  "result": {
+    "count": 1,
+    "id": "annesarmory:iron_broadsword"
+  },
+  "template": {
+    "item": "annesarmory:broadsword_upgrade_template"
+  }
+}

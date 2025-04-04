@@ -136,6 +136,27 @@ public class ModItems {
             )
     );
 
+    public static final RegistryObject<Item> IRON_BROADSWORD = ITEMS.register("iron_broadsword",
+            () -> new BroadswordItem(Tiers.IRON, new Item.Properties().attributes(SwordItem.createAttributes(Tiers.IRON, 4, -3.2F)))
+    );
+    public static final RegistryObject<Item> DIAMOND_BROADSWORD = ITEMS.register("diamond_broadsword",
+            () -> new BroadswordItem(Tiers.DIAMOND, new Item.Properties().attributes(SwordItem.createAttributes(Tiers.DIAMOND, 4, -3.2F)))
+    );
+    public static final RegistryObject<Item> NETHERITE_BROADSWORD = ITEMS.register("netherite_broadsword",
+            () -> new BroadswordItem(Tiers.NETHERITE, new Item.Properties().attributes(SwordItem.createAttributes(Tiers.NETHERITE, 4, -3.2F)))
+    );
+    public static final RegistryObject<Item> BROADSWORD_UPGRADE_TEMPLATE = ITEMS.register("broadsword_upgrade_template",
+            () -> new SmithingTemplateItem(
+                    upgradeApplyComponent("broadsword"),
+                    upgradeIngredientComponent("broadsword"),
+                    upgradeTitle("broadsword"),
+                    upgradeBaseComponent("broadsword"),
+                    upgradeAdditionComponent("broadsword"),
+                    createUpgradeIconList(),
+                    createUpgradeMaterialList()
+            )
+    );
+
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }

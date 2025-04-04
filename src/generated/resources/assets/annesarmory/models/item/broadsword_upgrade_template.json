@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "annesarmory:item/dagger_upgrade_template"
+    "layer0": "annesarmory:item/broadsword_upgrade_template"
   }
 }

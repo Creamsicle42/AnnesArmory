@@ -92,5 +92,12 @@ public class ModGlobalLootModifierProvider extends GlobalLootModifierProvider {
                 ModItems.DAGGER_UPGRADE_TEMPLATE.get()
         ));
 
+        // Add broadsword template to dungeons
+        add("broadsword_template_from_jungle_temple", new AddItemModifier(new LootItemCondition[]{
+                new LootTableIdCondition.Builder(ResourceLocation.withDefaultNamespace("chests/simple_dungeon")).build(),
+                LootItemRandomChanceCondition.randomChance(0.1f).build()
+        },
+                ModItems.BROADSWORD_UPGRADE_TEMPLATE.get()
+        ));
     }
 }

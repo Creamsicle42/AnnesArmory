@@ -29,10 +29,15 @@ public class ModModelProvider extends ItemModelProvider {
         basicItem(ModItems.DIAMONDSTEEL_NUGGET.get());
         basicItem(ModItems.DIAMONDSTEEL_UPGRADE_TEMPLATE.get());
 
-        handheldItem(ModItems.DAGGER_UPGRADE_TEMPLATE);
+        basicItem(ModItems.DAGGER_UPGRADE_TEMPLATE.get());
+        basicItem(ModItems.BROADSWORD_UPGRADE_TEMPLATE.get());
+
         handheldItem(ModItems.IRON_DAGGER);
         handheldItem(ModItems.DIAMOND_DAGGER);
         handheldItem(ModItems.NETHERITE_DAGGER);
+        handheldItem(ModItems.IRON_BROADSWORD);
+        handheldItem(ModItems.DIAMOND_BROADSWORD);
+        handheldItem(ModItems.NETHERITE_BROADSWORD);
     }
 
     private ItemModelBuilder handheldItem(RegistryObject<Item> item) {

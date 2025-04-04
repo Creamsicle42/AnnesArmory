@@ -10,6 +10,10 @@
   "item.annesarmory.diamond_dagger": "Diamond Dagger",
   "item.annesarmory.netherite_dagger": "Netherite Dagger",
 
+  "item.annesarmory.iron_broadsword": "Iron Broadsword",
+  "item.annesarmory.diamond_broadsword": "Diamond Broadsword",
+  "item.annesarmory.netherite_broadsword": "Netherite Broadsword",
+
   "item.annesarmory.diamondsteel_compound": "Diamondsteel Compound",
   "item.annesarmory.diamondsteel_nugget": "Diamondsteel Nugget",
   "item.annesarmory.diamondsteel_ingot": "Diamondsteel Ingot",
@@ -27,5 +31,10 @@
   "item.annesarmory.dagger_upgrade_template": "Smithing Template",
   "upgrade.annesarmory.dagger_upgrade": "Dagger Upgrade",
   "item.annesarmory.smithing_template.dagger_upgrade.applies_to": "Iron or better Sword",
-  "item.annesarmory.smithing_template.dagger_upgrade.ingredients": "Matching upgrade material"
+  "item.annesarmory.smithing_template.dagger_upgrade.ingredients": "Matching upgrade material",
+
+  "item.annesarmory.broadsword_upgrade_template": "Smithing Template",
+  "upgrade.annesarmory.broadsword_upgrade": "Broadsword Upgrade",
+  "item.annesarmory.smithing_template.broadsword_upgrade.applies_to": "Iron or better Sword",
+  "item.annesarmory.smithing_template.broadsword_upgrade.ingredients": "Matching upgrade material"
 }

@@ -36,6 +36,12 @@ public class ModCreativeModeTab {
                         output.accept(ModItems.DIAMOND_DAGGER.get());
                         output.accept(ModItems.NETHERITE_DAGGER.get());
 
+                        // Broadsword Line
+                        output.accept(ModItems.BROADSWORD_UPGRADE_TEMPLATE.get());
+                        output.accept(ModItems.IRON_BROADSWORD.get());
+                        output.accept(ModItems.DIAMOND_BROADSWORD.get());
+                        output.accept(ModItems.NETHERITE_BROADSWORD.get());
+
                     })
                     .build()
             );
