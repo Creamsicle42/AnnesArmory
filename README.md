@@ -2,6 +2,8 @@
 
 Annes Armory is a full re-balance of vanilla equipment progression, intended to increase the usefulness period of low-tier equipment such as stone and leather gear, revitalize older systems such as Anvil repair, and to incentivise early-game engagement with systems such as enchanting.
 
+[Detailed information about the mod can be found here.](https://github.com/Creamsicle42/AnnesArmory/wiki)
+
 ## Gear Upgrading
 
 Starting with Iron Tier, gear can no longer be directly crafted. Iron and Diamond gear must now be created using the template system, similar to Netherite.
@@ -18,4 +20,4 @@ Repair Kits have been added as a way to repair items on the go. They cost no XP 
 
 ## Tool Variants (Upcoming)
 
-Tool variants are created with smiting templates found as rare loot in the world. They completely change the way the tool is used. **This feature is planned for future updates of the mod.**
+Tool variants are created with smiting templates found as rare loot in the world. They completely change the way the tool is used.
