@@ -99,5 +99,13 @@ public class ModGlobalLootModifierProvider extends GlobalLootModifierProvider {
         },
                 ModItems.BROADSWORD_UPGRADE_TEMPLATE.get()
         ));
+
+        // Add rapier upgrade to desert temple
+        add("rapier_template_from_desert_temple", new AddItemModifier(new LootItemCondition[]{
+                new LootTableIdCondition.Builder(ResourceLocation.withDefaultNamespace("chests/desert_pyramid")).build(),
+                LootItemRandomChanceCondition.randomChance(0.1f).build()
+        },
+                ModItems.RAPIER_UPGRADE_TEMPLATE.get()
+        ));
     }
 }

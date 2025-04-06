@@ -9,7 +9,8 @@
     "annesarmory:diamond_template_from_trial_chamber_inter",
     "annesarmory:diamond_template_from_deep_dark",
     "annesarmory:diamond_template_from_nether_bridge",
-    "annesarmory:iron_template_from_jungle_temple"
+    "annesarmory:iron_template_from_jungle_temple",
+    "annesarmory:rapier_template_from_desert_temple"
   ],
   "replace": false
 }

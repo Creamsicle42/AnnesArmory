@@ -24,18 +24,21 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     static List<Item> ironSwordLike = List.of(
             Items.IRON_SWORD,
             ModItems.IRON_DAGGER.get(),
-            ModItems.IRON_BROADSWORD.get()
+            ModItems.IRON_BROADSWORD.get(),
+            ModItems.IRON_RAPIER.get()
     );
     static List<Item> diamondSwordLike = List.of(
             Items.DIAMOND_SWORD,
             ModItems.DIAMOND_DAGGER.get(),
-            ModItems.DIAMOND_BROADSWORD.get()
+            ModItems.DIAMOND_BROADSWORD.get(),
+            ModItems.DIAMOND_RAPIER.get()
     );
 
     static List<Item> netheriteSwordLike = List.of(
             Items.NETHERITE_SWORD,
             ModItems.NETHERITE_DAGGER.get(),
-            ModItems.NETHERITE_BROADSWORD.get()
+            ModItems.NETHERITE_BROADSWORD.get(),
+            ModItems.NETHERITE_RAPIER.get()
     );
 
 
@@ -89,6 +92,10 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         groupSmithing(ironSwordLike, ModItems.IRON_BROADSWORD.get(), ModItems.BROADSWORD_UPGRADE_TEMPLATE.get(), ModItems.REFINED_IRON_INGOT.get(), pRecipeOutput);
         groupSmithing(diamondSwordLike, ModItems.DIAMOND_BROADSWORD.get(), ModItems.BROADSWORD_UPGRADE_TEMPLATE.get(), ModItems.DIAMONDSTEEL_INGOT.get(), pRecipeOutput);
         groupSmithing(netheriteSwordLike, ModItems.NETHERITE_BROADSWORD.get(), ModItems.BROADSWORD_UPGRADE_TEMPLATE.get(), Items.NETHERITE_INGOT, pRecipeOutput);
+
+        groupSmithing(ironSwordLike, ModItems.IRON_RAPIER.get(), ModItems.RAPIER_UPGRADE_TEMPLATE.get(), ModItems.REFINED_IRON_INGOT.get(), pRecipeOutput);
+        groupSmithing(diamondSwordLike, ModItems.DIAMOND_RAPIER.get(), ModItems.RAPIER_UPGRADE_TEMPLATE.get(), ModItems.DIAMONDSTEEL_INGOT.get(), pRecipeOutput);
+        groupSmithing(netheriteSwordLike, ModItems.NETHERITE_RAPIER.get(), ModItems.RAPIER_UPGRADE_TEMPLATE.get(), Items.NETHERITE_INGOT, pRecipeOutput);
 
 
         smithingUpgrade(
@@ -267,6 +274,13 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
         smithingChain(
                 List.of(ModItems.IRON_BROADSWORD.get(), ModItems.DIAMOND_BROADSWORD.get(), ModItems.NETHERITE_BROADSWORD.get()),
+                List.of(ModItems.DIAMONDSTEEL_UPGRADE_TEMPLATE.get(), Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),
+                List.of(ModItems.DIAMONDSTEEL_INGOT.get(), Items.NETHERITE_INGOT),
+                pRecipeOutput
+        );
+
+        smithingChain(
+                List.of(ModItems.IRON_RAPIER.get(), ModItems.DIAMOND_RAPIER.get(), ModItems.NETHERITE_RAPIER.get()),
                 List.of(ModItems.DIAMONDSTEEL_UPGRADE_TEMPLATE.get(), Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),
                 List.of(ModItems.DIAMONDSTEEL_INGOT.get(), Items.NETHERITE_INGOT),
                 pRecipeOutput

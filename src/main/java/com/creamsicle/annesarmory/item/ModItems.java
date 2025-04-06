@@ -157,6 +157,27 @@ public class ModItems {
             )
     );
 
+    public static final RegistryObject<Item> IRON_RAPIER = ITEMS.register("iron_rapier",
+            () -> new RapierItem(Tiers.IRON, new Item.Properties().attributes(SwordItem.createAttributes(Tiers.IRON, 3, -2.0F)), 0.5f, 20)
+    );
+    public static final RegistryObject<Item> DIAMOND_RAPIER = ITEMS.register("diamond_rapier",
+            () -> new RapierItem(Tiers.DIAMOND, new Item.Properties().attributes(SwordItem.createAttributes(Tiers.DIAMOND, 3, -2.0F)), 0.5f, 20)
+    );
+    public static final RegistryObject<Item> NETHERITE_RAPIER = ITEMS.register("netherite_rapier",
+            () -> new RapierItem(Tiers.NETHERITE, new Item.Properties().attributes(SwordItem.createAttributes(Tiers.NETHERITE, 3, -2.0F)), 0.5f, 20)
+    );
+    public static final RegistryObject<Item> RAPIER_UPGRADE_TEMPLATE = ITEMS.register("rapier_upgrade_template",
+            () -> new SmithingTemplateItem(
+                    upgradeApplyComponent("rapier"),
+                    upgradeIngredientComponent("rapier"),
+                    upgradeTitle("rapier"),
+                    upgradeBaseComponent("rapier"),
+                    upgradeAdditionComponent("rapier"),
+                    createUpgradeIconList(),
+                    createUpgradeMaterialList()
+            )
+    );
+
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }

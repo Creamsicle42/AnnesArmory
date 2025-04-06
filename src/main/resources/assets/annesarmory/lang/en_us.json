@@ -14,6 +14,10 @@
   "item.annesarmory.diamond_broadsword": "Diamond Broadsword",
   "item.annesarmory.netherite_broadsword": "Netherite Broadsword",
 
+  "item.annesarmory.iron_rapier": "Iron Rapier",
+  "item.annesarmory.diamond_rapier": "Diamond Rapier",
+  "item.annesarmory.netherite_rapier": "Netherite Rapier",
+
   "item.annesarmory.diamondsteel_compound": "Diamondsteel Compound",
   "item.annesarmory.diamondsteel_nugget": "Diamondsteel Nugget",
   "item.annesarmory.diamondsteel_ingot": "Diamondsteel Ingot",
@@ -36,5 +40,10 @@
   "item.annesarmory.broadsword_upgrade_template": "Smithing Template",
   "upgrade.annesarmory.broadsword_upgrade": "Broadsword Upgrade",
   "item.annesarmory.smithing_template.broadsword_upgrade.applies_to": "Iron or better Sword",
-  "item.annesarmory.smithing_template.broadsword_upgrade.ingredients": "Matching upgrade material"
+  "item.annesarmory.smithing_template.broadsword_upgrade.ingredients": "Matching upgrade material",
+
+  "item.annesarmory.rapier_upgrade_template": "Smithing Template",
+  "upgrade.annesarmory.rapier_upgrade": "Rapier Upgrade",
+  "item.annesarmory.smithing_template.rapier_upgrade.applies_to": "Iron or better Sword",
+  "item.annesarmory.smithing_template.rapier_upgrade.ingredients": "Matching upgrade material"
 }

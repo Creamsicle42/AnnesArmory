@@ -42,6 +42,12 @@ public class ModCreativeModeTab {
                         output.accept(ModItems.DIAMOND_BROADSWORD.get());
                         output.accept(ModItems.NETHERITE_BROADSWORD.get());
 
+                        // Rapier Line
+                        output.accept(ModItems.RAPIER_UPGRADE_TEMPLATE.get());
+                        output.accept(ModItems.IRON_RAPIER.get());
+                        output.accept(ModItems.DIAMOND_RAPIER.get());
+                        output.accept(ModItems.NETHERITE_RAPIER.get());
+
                     })
                     .build()
             );

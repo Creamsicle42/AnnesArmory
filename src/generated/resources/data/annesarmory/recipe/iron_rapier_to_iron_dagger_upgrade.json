@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "annesarmory:refined_iron_ingot"
+  },
+  "base": {
+    "item": "annesarmory:iron_rapier"
+  },
+  "result": {
+    "count": 1,
+    "id": "annesarmory:iron_dagger"
+  },
+  "template": {
+    "item": "annesarmory:dagger_upgrade_template"
+  }
+}

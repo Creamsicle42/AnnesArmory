@@ -31,6 +31,7 @@ public class ModModelProvider extends ItemModelProvider {
 
         basicItem(ModItems.DAGGER_UPGRADE_TEMPLATE.get());
         basicItem(ModItems.BROADSWORD_UPGRADE_TEMPLATE.get());
+        basicItem(ModItems.RAPIER_UPGRADE_TEMPLATE.get());
 
         handheldItem(ModItems.IRON_DAGGER);
         handheldItem(ModItems.DIAMOND_DAGGER);
@@ -38,6 +39,9 @@ public class ModModelProvider extends ItemModelProvider {
         handheldItem(ModItems.IRON_BROADSWORD);
         handheldItem(ModItems.DIAMOND_BROADSWORD);
         handheldItem(ModItems.NETHERITE_BROADSWORD);
+        handheldItem(ModItems.IRON_RAPIER);
+        handheldItem(ModItems.DIAMOND_RAPIER);
+        handheldItem(ModItems.NETHERITE_RAPIER);
     }
 
     private ItemModelBuilder handheldItem(RegistryObject<Item> item) {

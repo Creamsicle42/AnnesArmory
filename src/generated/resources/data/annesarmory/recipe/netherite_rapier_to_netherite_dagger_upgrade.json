@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "minecraft:netherite_ingot"
+  },
+  "base": {
+    "item": "annesarmory:netherite_rapier"
+  },
+  "result": {
+    "count": 1,
+    "id": "annesarmory:netherite_dagger"
+  },
+  "template": {
+    "item": "annesarmory:dagger_upgrade_template"
+  }
+}
