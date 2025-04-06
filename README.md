@@ -18,6 +18,6 @@ Anvils have been completely reworked. Fully repairing an item now always only co
 
 Repair Kits have been added as a way to repair items on the go. They cost no XP to use, but are less efficient, only repairing a third of the tools max damage per repair material used.
 
-## Tool Variants (Upcoming)
+## Tool Variants
 
 Tool variants are created with smiting templates found as rare loot in the world. They completely change the way the tool is used.
